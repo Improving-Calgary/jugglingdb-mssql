@@ -1,13 +1,13 @@
 jugglingdb-mssql
 ================
 
-MsSQL adapter for the jugglingdb ORM
+MsSQL adapter for the jugglingdb ORM.
 
 Now passing all tests exposed by the jugglingdb framework!
 
 Usage
 ---
-To use it you need <pre><code>jugglingdb@0.2.x</code></pre> and msnodesql
+To use it you need <pre><code>jugglingdb@0.2.x</code></pre> and mssql
 
 1. Setup dependencies in package.json:
   <pre>
@@ -15,7 +15,7 @@ To use it you need <pre><code>jugglingdb@0.2.x</code></pre> and msnodesql
     {
       ...
       "dependencies":{
-        "msnodesql":"~0.2.1",
+        "mssql":"~0.5.3",
         "jugglingdb": "~0.2.0",
         "jugglingdb-mssql":"latest"
       }

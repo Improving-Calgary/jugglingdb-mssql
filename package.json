@@ -1,20 +1,20 @@
 {
   "name": "jugglingdb-mssql",
-  "version": "0.1.5",
+  "version": "0.2.0",
   "description": "MsSQL adapter for JugglingDB",
   "main": "index.js",
   "dependencies": {
     "jugglingdb": "~0.2.0-22",
     "util":"~0.4.9",
-    "msnodesql":"~0.2.1"
+    "mssql":"~0.5.3"
   },
   "devDependencies": {
     "nodeunit":"~0.7.4"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/code-vicar/jugglingdb-mssql.git"
+    "url": "https://github.com/yads/jugglingdb-mssql.git"
   },
-  "author": "Scott Vickers",
+  "author": "Vadim Kazakov, Scott Vickers",
   "license": "MIT"
 }
