@@ -4,7 +4,7 @@ var jdb = require('jugglingdb'),
     db = require("../db/dbconfig");
 
 var adapter = require("../");
-var schemaSettings = { host:db.server, database:db.db, username:db.user, password:db.pwd };
+var schemaSettings = { host:db.server, database:db.db, username:db.user, password:db.pwd, options: db.options };
 var schema = new Schema(adapter, schemaSettings);
 
 //run the tests exposed by jugglingdb
