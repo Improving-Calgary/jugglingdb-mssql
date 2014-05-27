@@ -3,13 +3,17 @@
   "version": "0.2.0",
   "description": "MsSQL adapter for JugglingDB",
   "main": "index.js",
-  "dependencies": {
+    "scripts": {
+        "test": "./node_modules/.bin/mocha test/*.test.js"
+    },
+    "dependencies": {
     "jugglingdb": "~0.2.14",
     "util":"~0.4.9",
     "mssql":"~0.5.3"
   },
   "devDependencies": {
-    "nodeunit":"~0.7.4"
+      "should": "~1.2.2",
+      "mocha":"~1.8.2"
   },
   "repository": {
     "type": "git",
