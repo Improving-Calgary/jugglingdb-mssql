@@ -12,6 +12,11 @@ logs
 results
 
 *.sublime*
+.idea
+*.iml
+
+coverage/
+
 node_modules/
 db/
 
