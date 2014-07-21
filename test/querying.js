@@ -29,36 +29,47 @@ describe('querying using IN clause', function () {
       });
   });
 
-  function seed(done) {
-      var count = 0;
-      var beatles = [
-          {
-              name: 'John Lennon',
-              mail: 'john@b3atl3s.co.uk',
-              role: 'lead',
-              order: 2
-          }, {
-              name: 'Paul McCartney',
-              mail: 'paul@b3atl3s.co.uk',
-              role: 'lead',
-              order: 1
-          },
-          {name: 'George Harrison', order: 5},
-          {name: 'Ringo Starr', order: 6},
-          {name: 'Pete Best', order: 4},
-          {name: 'Stuart Sutcliffe', order: 3}
-      ];
-      User.destroyAll(function() {
-          beatles.forEach(function(beatle) {
-              User.create(beatle, ok);
-          });
-      });
+  it('should query empty array', function (done) {
+    User.all({ where: {name: {inq: [] } } }, function(err, users) {
+        should.exists(users);
+        should.not.exists(err);
+        users.should.have.lengthOf(0);
+        done();
+    });
 
-      function ok() {
-          if (++count === beatles.length) {
-              done();
-          }
-      }
-  }
+  });
 
 });
+
+
+function seed(done) {
+    var count = 0;
+    var beatles = [
+        {
+            name: 'John Lennon',
+            mail: 'john@b3atl3s.co.uk',
+            role: 'lead',
+            order: 2
+        }, {
+            name: 'Paul McCartney',
+            mail: 'paul@b3atl3s.co.uk',
+            role: 'lead',
+            order: 1
+        },
+        {name: 'George Harrison', order: 5},
+        {name: 'Ringo Starr', order: 6},
+        {name: 'Pete Best', order: 4},
+        {name: 'Stuart Sutcliffe', order: 3}
+    ];
+    User.destroyAll(function() {
+        beatles.forEach(function(beatle) {
+            User.create(beatle, ok);
+        });
+    });
+
+    function ok() {
+        if (++count === beatles.length) {
+            done();
+        }
+    }
+}
