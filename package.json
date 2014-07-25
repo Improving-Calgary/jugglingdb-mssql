@@ -1,6 +1,6 @@
 {
   "name": "jugglingdb-mssql",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "MsSQL adapter for JugglingDB",
   "main": "index.js",
     "scripts": {
