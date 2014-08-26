@@ -1,7 +1,7 @@
 jugglingdb-mssql
 ================
 
-MsSQL adapter for the jugglingdb ORM.
+MsSQL adapter for the jugglingdb ORM. Compatible with Azure SQL Server.
 
 Now passing all tests exposed by the jugglingdb framework!
 
@@ -28,6 +28,15 @@ To use it you need <pre><code>jugglingdb@0.2.x</code></pre> and mssql
     <code>
     var Schema = require("jugglingdb").Schema;
     var schema = new Schema("mssql", {host:"YourSqlServer", database:"YourDatabase"});
+    ...
+    </code>
+  </pre>
+  <pre>
+    <code>
+    var Schema = require("jugglingdb").Schema;
+    var schema = new Schema("mssql", {host:"AzureServer", database:"YourDatabase",
+                                      username: "YourUserName", password: "YourPassword",
+                                      azure: true});
     ...
     </code>
   </pre>
