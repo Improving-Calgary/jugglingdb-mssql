@@ -7,7 +7,7 @@ Now passing all tests exposed by the jugglingdb framework!
 
 Usage
 ---
-To use it you need <pre><code>jugglingdb@0.2.x</code></pre>. This package uses the [mssql](//github.com/patriksimek/node-mssql) package which in turn uses [tedious](//github.com/pekim/tedious) out of the box. Support is also provided for the native Windows MSSQL driver as well as node-tds. See the mssql documentation page for more information.
+To use it you need `jugglingdb >= 0.2.x`. This package uses the [mssql](//github.com/patriksimek/node-mssql) package which in turn uses [tedious](//github.com/pekim/tedious) out of the box. Support is also provided for the native Windows MSSQL driver as well as node-tds. See the mssql documentation page for more information.
 
 1. Setup dependencies in package.json:
   <pre>
